@@ -1,0 +1,13 @@
+[Source: apple_support] [Title: About iMessage - Apple Support]
+
+/ios/26), [inline replies](https://support.apple.com/guide/iphone/send-and-reply-to-messages-iph82fb73ba3/26/ios/26#iph89c62f75e), [editing](https://support.apple.com/guide/iphone/unsend-and-edit-messages-iphe67195653/26/ios/26#iph023262dda), [unsending](https://support.apple.com/guide/iphone/unsend-and-edit-messages-iphe67195653/26/ios/26#iph877f4c34b), [scheduling](https://support.apple.com/guide/iphone/schedule-a-text-message-to-send-later-iph5ae9a7be6/26/ios/26), [backgrounds](https://support.apple.com/guide/iphone/add-backgrounds-iph605fa06e4/26/ios/26), [polls](https://support.apple.com/guide/iphone/poll-people-in-a-conversation-iphde1787df4/26/ios/26), [Memoji](https://support.apple.com/guide/iphone/create-and-send-memoji-iphd730f04a7/26/ios/26), [drawings](https://support.apple.com/guide/iphone/draw-and-handwrite-messages-iph3d4cb79c9/26/ios/26), [collaboration](https://support.apple.com/guide/iphone/collaborate-on-projects-iphf08c82a16/26/ios/26), [group conversation management](https://support.apple.com/guide/iphone/group-conversations-iphb10c80fc5/26/ios/26), and more.
+
+- A greater range of options are available when you [react with Tapbacks](https://support.apple.com/guide/iphone/react-with-tapbacks-iph018d3c336/26/ios/26), [send audio messages](https://support.apple.com/guide/iphone/send-and-receive-audio-messages-iph2e42d3117/26/ios/26), or [send via satellite](https://support.apple.com/guide/iphone/text-via-satellite-iphb9262f4dd/26/ios/26).
+
+- When you use iMessage, you can [report spam messages](https://support.apple.com/guide/iphone/report-spam-and-block-senders-iph3f94d910d/26/ios/26#iph2ad4f25a1) to Apple and [screen unknown senders](https://support.apple.com/guide/iphone/screen-and-filter-texts-iph203ab0be4/26/ios/26#iphb62e224e4).
+
+- For security, messages sent using iMessage are end-to-end encrypted before they’re sent, and you can also use [Contact Key Verification](https://support.apple.com/guide/iphone/use-contact-key-verification-iph654dd8c53/26/ios/26).
+
+![The Add menu in Messages on iPhone, listing several iMessage features: audio messaging, the App Store, GIF images, Check In, Digital Touch, location sharing, and Memoji.](https://help.apple.com/assets/69F8EBBDF3B89A4F6E0C704C/69F8EBC43862495245036393/en_US/0304619af6cecf6f20d624cd333b7d47.png)
+
+**See also** [Turn on iMessage](https://support.apple.com/guide/iphone/set-up-messages-iph3d039b67/26/ios/26#iphe50bc4b2a) [Set up Messages on iPhone](https://support.apple.com/guide/ip

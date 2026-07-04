@@ -1,0 +1,27 @@
+{
+  "created": "2026-06-25",
+  "brand": "apple",
+  "total_documents": 137,
+  "total_chunks": 619,
+  "total_chars": 1028785,
+  "estimated_tokens": 257196,
+  "by_category": {
+    "specs": {
+      "docs": 46,
+      "chunks": 298
+    },
+    "howto": {
+      "docs": 91,
+      "chunks": 321
+    }
+  },
+  "by_series": {
+    "iPhone 16": 5,
+    "iPhone 15": 4,
+    "iPhone 14": 3,
+    "iPhone 13": 4,
+    "iPhone SE": 1
+  },
+  "manifest": "C:\\Users\\VP-PC\\.firecrawl\\apple-kb\\manifest.json",
+  "jsonl": "C:\\Users\\VP-PC\\.firecrawl\\apple-kb\\chunks.jsonl"
+}

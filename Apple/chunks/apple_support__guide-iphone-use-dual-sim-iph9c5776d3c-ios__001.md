@@ -1,0 +1,29 @@
+[Source: apple_support] [Title: Use Dual SIM on iPhone - Apple Support]
+
+## Set up Dual SIM
+
+1. Go to the Settings app ![](https://help.apple.com/assets/69F8EBBDF3B89A4F6E0C704C/69F8EBC43862495245036393/en_US/f6b5581fdf38013a42e265720f20b597.png) on your iPhone.
+
+2. Tap Cellular, then make sure you have at least two lines (below SIMs). To add a line, see [Set up cellular service](https://support.apple.com/guide/iphone/set-up-cellular-service-iph3f11fba92/26/ios/26).
+
+3. Turn on two lines—tap a line, then tap Turn On this Line.
+
+You can also change settings such as Cellular Plan Label, Wi-Fi Calling (if available from your carrier), Calls on Other Devices, or SIM PIN. The label appears in Phone, Messages, and Contacts.
+
+4. Choose the default line for cellular data—tap Cellular Data, then tap a line. To use either line depending on coverage and availability, turn on Allow Cellular Data Switching.
+
+You may incur roaming charges if Data Roaming is on and you’re outside the country or region covered by the carrier’s network.
+
+5. Choose the default line for voice calls—tap Default Voice Line, then tap a line.
+
+When using Dual SIM, note the following:
+
+- Wi-Fi Calling must be turned on for a line to enable that line to receive calls while the other line is in use for a call. If you receive a call on one line while the other is in use for a call, and no Wi-Fi connection is available, iPhone uses the cellular data of the line that is in use for the call to receive the other line’s call. Charges may apply. The line that is in use for the call must be permitted for data use in your Cellular Data settings (either as the default line, or as the non-default line with Allow Cellular Data Switching turned on) to receive the other line’s call.
+
+- If you don’t turn on Wi-Fi Calling for a line, any incoming phone calls on that line (including calls from emergency services) go directly to voicemail (if available from your carrier) when the other line is in use; you won’t receive missed call notifications.
+
+If you set up conditional call forwarding (if available from your carrier) from one line to another when a line is busy or not in service, the calls don’t go to voicemail; contact your carrier for setup information.
+
+- If you make a phone call from another device, such as your Mac, by relaying it through your iPhone with Dual SIM, the call is made using your default voice line.
+
+- If you start an SMS/MMS Messages conversation using one line, you can’t switch the conversation to your other line; you need to delete the conversation and start a ne
