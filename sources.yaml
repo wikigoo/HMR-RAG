@@ -1,0 +1,33 @@
+# HMR-RAG — crawl sources manifest
+# ---------------------------------------------------------------------------
+# Edit this file to ADD or REMOVE sources, then run the "Crawl sources" GitHub
+# Action (Actions tab -> Crawl sources -> Run workflow). Crawling is manual-
+# trigger only — nothing runs on a schedule.
+#
+# Each source becomes a cleaned markdown file at:
+#     <brand>/<category>/<slug>.md
+# with YAML frontmatter (source, brand, category, model, crawled). Re-running a
+# source overwrites its file with a fresh crawl.
+#
+# Fields:
+#   url       (required)  the page to crawl
+#   brand     (required)  apple | samsung | xiaomi | other
+#   category  (required)  specs | howto | price | registry | other
+#   model     (optional)  human label, e.g. "Apple iPhone 15 Pro Max"
+# ---------------------------------------------------------------------------
+
+sources:
+  - url: https://www.gsmarena.com/apple_iphone_15_pro_max-12548.php
+    brand: apple
+    category: specs
+    model: Apple iPhone 15 Pro Max
+
+  - url: https://www.gsmarena.com/samsung_galaxy_s24_ultra-12771.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy S24 Ultra
+
+  - url: https://www.gsmarena.com/xiaomi_14_ultra-12827.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi 14 Ultra
