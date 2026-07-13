@@ -30,6 +30,31 @@ def slugify(url: str) -> str:
     return s[:90] or "page"
 
 
+# Residual boilerplate lines to drop after crawl4AI's own filtering. Only
+# applied to short lines so real prose that happens to contain a word is kept.
+_NOISE = re.compile(
+    r"(^ADVERTISEMENT$"
+    r"|Become a fan"
+    r"|\d[\d,]*\s*hits"
+    r"|Skip to (?:main )?content"
+    r"|\bSign in\b|\bLog in\b"
+    r"|Accept.*cookies|cookie policy|consent"
+    r"|Follow us on|Share on (?:Facebook|Twitter|X|WhatsApp|Telegram))",
+    re.IGNORECASE,
+)
+
+
+def clean_markdown(md: str) -> str:
+    kept = []
+    for line in md.splitlines():
+        s = line.strip()
+        if s and len(s) < 120 and _NOISE.search(s):
+            continue
+        kept.append(line.rstrip())
+    text = "\n".join(kept)
+    return re.sub(r"\n{3,}", "\n\n", text).strip()
+
+
 def frontmatter(src: dict) -> str:
     lines = [
         "---",
@@ -60,9 +85,14 @@ async def main() -> int:
     browser_cfg = BrowserConfig(headless=True, verbose=False)
     run_cfg = CrawlerRunConfig(
         cache_mode=CacheMode.BYPASS,
+        excluded_tags=["nav", "header", "footer", "aside", "form", "script", "style"],
+        exclude_external_links=True,
+        exclude_social_media_links=True,
+        remove_overlay_elements=True,
+        word_count_threshold=5,
         markdown_generator=DefaultMarkdownGenerator(
             content_filter=PruningContentFilter(
-                threshold=0.48, threshold_type="fixed", min_word_threshold=0
+                threshold=0.5, threshold_type="fixed", min_word_threshold=3
             )
         ),
     )
@@ -91,6 +121,7 @@ async def main() -> int:
                 or getattr(res.markdown, "raw_markdown", "")
                 or (res.markdown if isinstance(res.markdown, str) else "")
             )
+            md = clean_markdown(md)
             if len(md.strip()) < 200:
                 print(f"THIN  {url}: {len(md.strip())} chars, skipped", file=sys.stderr)
                 failed += 1
