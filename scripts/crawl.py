@@ -133,13 +133,18 @@ async def main() -> int:
         remove_overlay_elements=True,
         word_count_threshold=5,
         # mi.com's support FAQ pages render their body client-side. Returning as
-        # soon as the DOM is ready captured an empty shell — 14 of them came back
+        # soon as the DOM was ready captured an empty shell — 14 of them came back
         # at exactly 17 chars and were dropped as THIN, which reads like a bad URL
-        # but was really us not waiting for the render. Wait for the network to go
-        # quiet, then give the page a moment to paint.
-        wait_until="networkidle",
-        delay_before_return_html=2.5,
-        page_timeout=45000,
+        # but was really us not waiting for the render. A fixed post-load delay
+        # fixes that.
+        #
+        # Do NOT use wait_until="networkidle" here. It was tried and it is worse:
+        # these pages keep analytics connections open so the network never goes
+        # idle, every request rode the page_timeout out to an error, and the run
+        # dropped from 41 successes to 26. Give the page time to paint instead of
+        # waiting for a quiet network that never comes.
+        delay_before_return_html=4.0,
+        page_timeout=60000,
         markdown_generator=DefaultMarkdownGenerator(
             content_filter=PruningContentFilter(
                 threshold=0.5, threshold_type="fixed", min_word_threshold=3
