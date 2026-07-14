@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_redmi_note_13-12776.php
 brand: xiaomi
 category: specs
 model: Xiaomi Redmi Note 13
-crawled: 2026-07-14T13:38:32Z
+crawled: 2026-07-14T13:51:52Z
 ---
 
 # Xiaomi Redmi Note 13

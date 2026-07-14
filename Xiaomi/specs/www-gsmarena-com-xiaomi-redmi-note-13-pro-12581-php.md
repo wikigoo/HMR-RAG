@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_redmi_note_13_pro-12581.php
 brand: xiaomi
 category: specs
 model: Xiaomi Redmi Note 13 Pro
-crawled: 2026-07-14T13:39:02Z
+crawled: 2026-07-14T13:52:32Z
 ---
 
 # Xiaomi Redmi Note 13 Pro
@@ -102,6 +102,3 @@ Total user opinions:
   * [ Xiaomi Redmi Note 13 Pro vs. Xiaomi Poco X6 Pro ](https://www.gsmarena.com/xiaomi_redmi_note_13_pro_vs_xiaomi_poco_x6_pro_review_battery_camera_price_compared-news-62476.php)
 
 © 2000-2026 [Terms of use](https://www.gsmarena.com/terms.php3)
-Do Not Sell or Share My Personal Information
-# Opt out of the sale or sharing of personal information
-We won't sell or share your personal information to inform the ads you see. You may still see interest-based ads if your information is sold or shared by other companies or was sold or shared previously.

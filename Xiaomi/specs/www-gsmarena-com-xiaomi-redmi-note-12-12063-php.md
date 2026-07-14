@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_redmi_note_12-12063.php
 brand: xiaomi
 category: specs
 model: Xiaomi Redmi Note 12
-crawled: 2026-07-14T13:37:47Z
+crawled: 2026-07-14T13:50:53Z
 ---
 
 # Xiaomi Redmi Note 12
@@ -87,6 +87,3 @@ Do not buy this phone at least not for long term use and by long term I mean lon
 
 Total user opinions:
 © 2000-2026 [Terms of use](https://www.gsmarena.com/terms.php3)
-Do Not Sell or Share My Personal Information
-# Opt out of the sale or sharing of personal information
-We won't sell or share your personal information to inform the ads you see. You may still see interest-based ads if your information is sold or shared by other companies or was sold or shared previously.

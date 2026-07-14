@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_poco_f6-13000.php
 brand: xiaomi
 category: specs
 model: Xiaomi Poco F6
-crawled: 2026-07-14T13:42:32Z
+crawled: 2026-07-14T13:57:37Z
 ---
 
 # Xiaomi Poco F6
@@ -94,6 +94,3 @@ Total user opinions:
   * [ Poco F6 vs. Poco F6 Pro ](https://www.gsmarena.com/poco_f6_vs_poco_f6_pro_review_battery_camera_price_compared-news-63048.php)
 
 © 2000-2026 [Terms of use](https://www.gsmarena.com/terms.php3)
-Do Not Sell or Share My Personal Information
-# Opt out of the sale or sharing of personal information
-We won't sell or share your personal information to inform the ads you see. You may still see interest-based ads if your information is sold or shared by other companies or was sold or shared previously.

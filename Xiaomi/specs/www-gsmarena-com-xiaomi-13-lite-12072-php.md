@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_13_lite-12072.php
 brand: xiaomi
 category: specs
 model: Xiaomi 13 Lite
-crawled: 2026-07-14T13:43:02Z
+crawled: 2026-07-14T13:58:17Z
 ---
 
 # Xiaomi 13 Lite

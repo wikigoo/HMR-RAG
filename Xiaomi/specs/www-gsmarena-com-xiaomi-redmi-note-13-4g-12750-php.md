@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_redmi_note_13_4g-12750.php
 brand: xiaomi
 category: specs
 model: Xiaomi Redmi Note 13 4G
-crawled: 2026-07-14T13:38:47Z
+crawled: 2026-07-14T13:52:12Z
 ---
 
 # Xiaomi Redmi Note 13 4G
@@ -83,6 +83,3 @@ bro you just need to read first. thay said only two majior updates . not 3 . So.
 
 Total user opinions:
 © 2000-2026 [Terms of use](https://www.gsmarena.com/terms.php3)
-Do Not Sell or Share My Personal Information
-# Opt out of the sale or sharing of personal information
-We won't sell or share your personal information to inform the ads you see. You may still see interest-based ads if your information is sold or shared by other companies or was sold or shared previously.

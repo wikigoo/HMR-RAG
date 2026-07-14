@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_redmi_note_14_pro-13355.php
 brand: xiaomi
 category: specs
 model: Xiaomi Redmi Note 14 Pro
-crawled: 2026-07-14T13:39:32Z
+crawled: 2026-07-14T13:53:12Z
 ---
 
 # Xiaomi Redmi Note 14 Pro 5G (India)
@@ -80,6 +80,3 @@ Please indicate if there's bypass charging
 
 Total user opinions:
 © 2000-2026 [Terms of use](https://www.gsmarena.com/terms.php3)
-Do Not Sell or Share My Personal Information
-# Opt out of the sale or sharing of personal information
-We won't sell or share your personal information to inform the ads you see. You may still see interest-based ads if your information is sold or shared by other companies or was sold or shared previously.

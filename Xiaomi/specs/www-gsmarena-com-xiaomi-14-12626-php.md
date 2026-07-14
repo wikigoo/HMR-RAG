@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_14-12626.php
 brand: xiaomi
 category: specs
 model: Xiaomi 14
-crawled: 2026-07-14T13:43:32Z
+crawled: 2026-07-14T13:58:57Z
 ---
 
 * Released 2023, November 01 188g or 193g, 8.2mm thickness Android 14, up to 15 256GB/512GB/1TB storage, no card slot
@@ -92,6 +92,3 @@ Total user opinions:
   * [ Samsung Galaxy S24 vs. Xiaomi 14 ](https://www.gsmarena.com/samsung_galaxy_s24_vs_xiaomi_14_review_battery_camera_price_compared-news-61697.php)
 
 © 2000-2026 [Terms of use](https://www.gsmarena.com/terms.php3)
-Do Not Sell or Share My Personal Information
-# Opt out of the sale or sharing of personal information
-We won't sell or share your personal information to inform the ads you see. You may still see interest-based ads if your information is sold or shared by other companies or was sold or shared previously.

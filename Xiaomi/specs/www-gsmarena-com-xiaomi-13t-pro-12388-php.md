@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_13t_pro-12388.php
 brand: xiaomi
 category: specs
 model: Xiaomi 13T Pro
-crawled: 2026-07-14T13:43:18Z
+crawled: 2026-07-14T13:58:37Z
 ---
 
 # Xiaomi 13T Pro
@@ -93,6 +93,3 @@ Total user opinions:
   * [ Xiaomi 13T Pro vs. Xiaomi 13T ](https://www.gsmarena.com/xiaomi_13t_pro_vs_xiaomi_13t_pro_review_battery_camera_price_compared-news-60735.php)
 
 © 2000-2026 [Terms of use](https://www.gsmarena.com/terms.php3)
-Do Not Sell or Share My Personal Information
-# Opt out of the sale or sharing of personal information
-We won't sell or share your personal information to inform the ads you see. You may still see interest-based ads if your information is sold or shared by other companies or was sold or shared previously.

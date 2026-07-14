@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_poco_c65-12684.php
 brand: xiaomi
 category: specs
 model: Xiaomi Poco C65
-crawled: 2026-07-14T13:41:02Z
+crawled: 2026-07-14T13:55:12Z
 ---
 
 # Xiaomi Poco C65
@@ -89,6 +89,3 @@ I saw this device on aliexpress on good budget price, So guys i want to know if 
 
 Total user opinions:
 © 2000-2026 [Terms of use](https://www.gsmarena.com/terms.php3)
-Do Not Sell or Share My Personal Information
-# Opt out of the sale or sharing of personal information
-We won't sell or share your personal information to inform the ads you see. You may still see interest-based ads if your information is sold or shared by other companies or was sold or shared previously.

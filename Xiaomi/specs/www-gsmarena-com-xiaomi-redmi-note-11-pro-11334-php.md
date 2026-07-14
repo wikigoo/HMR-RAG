@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_redmi_note_11_pro-11334.php
 brand: xiaomi
 category: specs
 model: Xiaomi Redmi Note 11 Pro
-crawled: 2026-07-14T13:37:17Z
+crawled: 2026-07-14T13:50:12Z
 ---
 
 # Xiaomi Redmi Note 11 Pro

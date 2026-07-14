@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_redmi_note_12_pro-11955.php
 brand: xiaomi
 category: specs
 model: Xiaomi Redmi Note 12 Pro
-crawled: 2026-07-14T13:38:02Z
+crawled: 2026-07-14T13:51:12Z
 ---
 
 # Xiaomi Redmi Note 12 Pro

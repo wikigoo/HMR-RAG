@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_poco_f5-12258.php
 brand: xiaomi
 category: specs
 model: Xiaomi Poco F5
-crawled: 2026-07-14T13:42:17Z
+crawled: 2026-07-14T13:57:17Z
 ---
 
 # Xiaomi Poco F5

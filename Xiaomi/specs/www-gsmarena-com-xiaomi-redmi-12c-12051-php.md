@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_redmi_12c-12051.php
 brand: xiaomi
 category: specs
 model: Xiaomi Redmi 12C
-crawled: 2026-07-14T13:40:17Z
+crawled: 2026-07-14T13:54:12Z
 ---
 
 # Xiaomi Redmi 12C
@@ -67,6 +67,3 @@ I have been using redmi 12c for about 4-5 years and it's still going well i will
 
 Total user opinions:
 © 2000-2026 [Terms of use](https://www.gsmarena.com/terms.php3)
-Do Not Sell or Share My Personal Information
-# Opt out of the sale or sharing of personal information
-We won't sell or share your personal information to inform the ads you see. You may still see interest-based ads if your information is sold or shared by other companies or was sold or shared previously.

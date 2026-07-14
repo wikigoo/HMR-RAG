@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_redmi_14c-13291.php
 brand: xiaomi
 category: specs
 model: Xiaomi Redmi 14C
-crawled: 2026-07-14T13:40:47Z
+crawled: 2026-07-14T13:54:52Z
 ---
 
 # Xiaomi Redmi 14C
@@ -68,7 +68,7 @@ We can not guarantee that the information on this page is 100% correct.
   * [Xiaomi Poco C75](https://www.gsmarena.com/xiaomi_poco_c75-13435.php)
 
 ## [Xiaomi Redmi 14C - user opinions and reviews](https://www.gsmarena.com/xiaomi_redmi_14c-reviews-13291.php)
-  * 21 hours ago
+  * 22 hours ago
 
 I think this is the worst phone from Redmi, very poor camera
   * 11 Jul 2026
@@ -80,6 +80,3 @@ Camera worst than a 2020 cheap phones. Even my 2019s Realme 5i's 12 mp camera wa
 
 Total user opinions:
 © 2000-2026 [Terms of use](https://www.gsmarena.com/terms.php3)
-Do Not Sell or Share My Personal Information
-# Opt out of the sale or sharing of personal information
-We won't sell or share your personal information to inform the ads you see. You may still see interest-based ads if your information is sold or shared by other companies or was sold or shared previously.

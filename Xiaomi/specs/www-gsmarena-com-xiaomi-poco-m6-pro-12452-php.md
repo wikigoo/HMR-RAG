@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_poco_m6_pro-12452.php
 brand: xiaomi
 category: specs
 model: Xiaomi Poco M6 Pro
-crawled: 2026-07-14T13:41:17Z
+crawled: 2026-07-14T13:55:32Z
 ---
 
 # Xiaomi Poco M6 Pro
@@ -74,6 +74,3 @@ bought the 128+6 model for 10k INR about slightly over a year ago. running great
 
 Total user opinions:
 © 2000-2026 [Terms of use](https://www.gsmarena.com/terms.php3)
-Do Not Sell or Share My Personal Information
-# Opt out of the sale or sharing of personal information
-We won't sell or share your personal information to inform the ads you see. You may still see interest-based ads if your information is sold or shared by other companies or was sold or shared previously.
