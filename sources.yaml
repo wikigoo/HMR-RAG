@@ -13,21 +13,497 @@
 #   url       (required)  the page to crawl
 #   brand     (required)  apple | samsung | xiaomi | other
 #   category  (required)  specs | howto | price | registry | other
-#   model     (optional)  human label, e.g. "Apple iPhone 15 Pro Max"
+#   model     (optional)  human label; for howto articles, the article title
+#
+# BEFORE ADDING A SOURCE, verify it actually returns HTTP 200:
+#   curl -s -o /dev/null -w "%{http_code}" -m 20 -A "Mozilla/5.0" "<url>"
+# Do NOT construct URLs from a pattern and assume they resolve. gsmarena numeric
+# ids and support-article ids are not guessable; invented ones 404.
+#
+# RATE LIMIT — gsmarena.com throttles at roughly 1 request / 10-15s and escalates
+# to a multi-hour IP ban on sustained bursts (observed: 429 with
+# Retry-After: 36000). scripts/crawl.py throttles per host for exactly this
+# reason. It also rejects bot-check interstitials, which gsmarena serves with an
+# HTTP 200 and enough text to slip past a naive length check.
+#
+# Prefer samsung.com/us/support/* and mi.com/global/support/* over the regional
+# mirrors — the mirrors carry the same articles under different slugs and would
+# fill the corpus with near-duplicates.
 # ---------------------------------------------------------------------------
 
 sources:
+  # =========================================================================
+  # APPLE — most of the Apple corpus is a legacy apple_support bulk import under
+  # Apple/chunks and Apple/howto; only this page comes from this pipeline.
+  # =========================================================================
   - url: https://www.gsmarena.com/apple_iphone_15_pro_max-12548.php
     brand: apple
     category: specs
     model: Apple iPhone 15 Pro Max
 
+  # =========================================================================
+  # SAMSUNG — specs (gsmarena). Weighted toward the mid-range and budget models
+  # that actually sell in Iran, not just the flagships.
+  # =========================================================================
+  - url: https://www.gsmarena.com/samsung_galaxy_a05-12583.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy A05
+  - url: https://www.gsmarena.com/samsung_galaxy_a06-13265.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy A06
+  - url: https://www.gsmarena.com/samsung_galaxy_a13-11402.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy A13
+  - url: https://www.gsmarena.com/samsung_galaxy_a14-12151.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy A14
+  - url: https://www.gsmarena.com/samsung_galaxy_a15_5g-12638.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy A15 5G
+  - url: https://www.gsmarena.com/samsung_galaxy_a16_5g-13346.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy A16 5G
+  - url: https://www.gsmarena.com/samsung_galaxy_a17_5g-14041.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy A17 5G
+  - url: https://www.gsmarena.com/samsung_galaxy_a25-12555.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy A25 5G
+  - url: https://www.gsmarena.com/samsung_galaxy_a26-13679.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy A26
+  - url: https://www.gsmarena.com/samsung_galaxy_a35-12705.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy A35
+  - url: https://www.gsmarena.com/samsung_galaxy_a36-13497.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy A36
+  - url: https://www.gsmarena.com/samsung_galaxy_a54-12070.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy A54
+  - url: https://www.gsmarena.com/samsung_galaxy_a55-12824.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy A55
+  - url: https://www.gsmarena.com/samsung_galaxy_a56-13603.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy A56
+  - url: https://www.gsmarena.com/samsung_galaxy_m15-12833.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy M15
+  - url: https://www.gsmarena.com/samsung_galaxy_m35-13006.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy M35
+  - url: https://www.gsmarena.com/samsung_galaxy_m55-12896.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy M55
+  - url: https://www.gsmarena.com/samsung_galaxy_s21_5g-10626.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy S21 5G
+  - url: https://www.gsmarena.com/samsung_galaxy_s21_fe_5g-10954.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy S21 FE 5G
+  - url: https://www.gsmarena.com/samsung_galaxy_s21_ultra_5g-10596.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy S21 Ultra 5G
+  - url: https://www.gsmarena.com/samsung_galaxy_s22_5g-11253.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy S22 5G
   - url: https://www.gsmarena.com/samsung_galaxy_s24_ultra-12771.php
     brand: samsung
     category: specs
     model: Samsung Galaxy S24 Ultra
 
+  # ---- These came from gsmarena's own maker-listing hrefs but were never
+  # ---- confirmed with a 200 (the discovery pass got IP-banned first). The crawl
+  # ---- itself is the verification: a dead URL logs FAIL, a bot-check page logs
+  # ---- BLOCKED. Neither can reach the corpus.
+  - url: https://www.gsmarena.com/samsung_galaxy_a03-11244.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy A03
+  - url: https://www.gsmarena.com/samsung_galaxy_s22_ultra_5g-11251.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy S22 Ultra 5G
+  - url: https://www.gsmarena.com/samsung_galaxy_s23-12082.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy S23
+  - url: https://www.gsmarena.com/samsung_galaxy_s23_fe-12520.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy S23 FE
+  - url: https://www.gsmarena.com/samsung_galaxy_s23_ultra-12024.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy S23 Ultra
+  - url: https://www.gsmarena.com/samsung_galaxy_s24-12773.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy S24
+  - url: https://www.gsmarena.com/samsung_galaxy_s24_fe-13262.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy S24 FE
+  - url: https://www.gsmarena.com/samsung_galaxy_s25-13610.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy S25
+  - url: https://www.gsmarena.com/samsung_galaxy_s25_ultra-13322.php
+    brand: samsung
+    category: specs
+    model: Samsung Galaxy S25 Ultra
+
+  # =========================================================================
+  # SAMSUNG — how-to / troubleshooting (samsung.com official support).
+  # The counterpart of the Apple Support articles that make up Apple/chunks.
+  # ANS10002504 (IMEI / serial lookup) serves the used-phone + counterfeit pillar.
+  # =========================================================================
+  - url: https://www.samsung.com/us/support/answer/ANS10002504/
+    brand: samsung
+    category: howto
+    model: Find your Samsung phone or tablet's IMEI, model, or serial number
+  - url: https://www.samsung.com/us/support/answer/ANS10002030/
+    brand: samsung
+    category: howto
+    model: Perform a factory reset on your Galaxy phone or tablet
+  - url: https://www.samsung.com/us/support/answer/ANS10002780/
+    brand: samsung
+    category: howto
+    model: Back up and restore data or files on your Galaxy phone or tablet
+  - url: https://www.samsung.com/us/support/answer/ANS10001344/
+    brand: samsung
+    category: howto
+    model: Smart Switch frequently asked questions
+  - url: https://www.samsung.com/us/support/answer/ANS10001345/
+    brand: samsung
+    category: howto
+    model: Transfer content with Samsung Smart Switch
+  - url: https://www.samsung.com/us/support/answer/ANS10002401/
+    brand: samsung
+    category: howto
+    model: New Galaxy phone or tablet quick setup with Smart Switch QR code
+  - url: https://www.samsung.com/us/support/answer/ANS10001619/
+    brand: samsung
+    category: howto
+    model: SIM cards for your Galaxy phone or tablet
+  - url: https://www.samsung.com/us/support/answer/ANS10002914/
+    brand: samsung
+    category: howto
+    model: Manage data usage on your Galaxy phone
+  - url: https://www.samsung.com/us/support/answer/ANS10002887/
+    brand: samsung
+    category: howto
+    model: Keep your Galaxy device at its normal operating temperature
+  - url: https://www.samsung.com/us/support/troubleshoot/TSG10001462/
+    brand: samsung
+    category: howto
+    model: Samsung phone or tablet will not charge
+  - url: https://www.samsung.com/us/support/troubleshoot/TSG10001538/
+    brand: samsung
+    category: howto
+    model: Battery draining fast on Galaxy phones and tablets
+  - url: https://www.samsung.com/us/support/troubleshoot/TSG10004885/
+    brand: samsung
+    category: howto
+    model: Cooling down popup appears on Samsung phone or tablet
+  - url: https://www.samsung.com/us/support/troubleshoot/TSG10004905/
+    brand: samsung
+    category: howto
+    model: Moisture in water-resistant Samsung phone or tablet's charging port
+  - url: https://www.samsung.com/us/support/troubleshoot/TSG10001534/
+    brand: samsung
+    category: howto
+    model: Low storage space error appears on Samsung phone or tablet
+  - url: https://www.samsung.com/us/support/troubleshoot/TSG10001914/
+    brand: samsung
+    category: howto
+    model: Cannot update or install apps on Galaxy phone or tablet
+  - url: https://www.samsung.com/us/support/troubleshoot/TSG10001548/
+    brand: samsung
+    category: howto
+    model: Samsung phone or tablet reboots repeatedly
+  - url: https://www.samsung.com/us/support/troubleshoot/TSG10001440/
+    brand: samsung
+    category: howto
+    model: Samsung phone or tablet freezes and crashes
+  - url: https://www.samsung.com/us/support/troubleshoot/TSG10004628/
+    brand: samsung
+    category: howto
+    model: Issues with Camera app on Samsung phone or tablet
+  - url: https://www.samsung.com/us/support/galaxy-battery/charging-tip/
+    brand: samsung
+    category: howto
+    model: Galaxy Battery - Charging Tip
+  - url: https://www.samsung.com/uk/support/mobile-devices/what-to-do-if-your-phone-is-not-charging/
+    brand: samsung
+    category: howto
+    model: What to do if your Samsung Phone is not charging
+  - url: https://www.samsung.com/uk/support/mobile-devices/my-device-displays-a-water-drop-icon-and-will-not-charge/
+    brand: samsung
+    category: howto
+    model: My device displays a water drop icon and will not charge
+
+  # =========================================================================
+  # XIAOMI — specs (gsmarena). Same caveat as the Samsung block above: harvested
+  # from gsmarena's own listing hrefs, verified at crawl time.
+  # =========================================================================
   - url: https://www.gsmarena.com/xiaomi_14_ultra-12827.php
     brand: xiaomi
     category: specs
     model: Xiaomi 14 Ultra
+  - url: https://www.gsmarena.com/xiaomi_redmi_note_11-11336.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Redmi Note 11
+  - url: https://www.gsmarena.com/xiaomi_redmi_note_11_pro-11334.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Redmi Note 11 Pro
+  - url: https://www.gsmarena.com/xiaomi_redmi_note_11s-11335.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Redmi Note 11S
+  - url: https://www.gsmarena.com/xiaomi_redmi_note_12-12063.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Redmi Note 12
+  - url: https://www.gsmarena.com/xiaomi_redmi_note_12_pro-11955.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Redmi Note 12 Pro
+  - url: https://www.gsmarena.com/xiaomi_redmi_note_12s-12218.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Redmi Note 12S
+  - url: https://www.gsmarena.com/xiaomi_redmi_note_13-12776.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Redmi Note 13
+  - url: https://www.gsmarena.com/xiaomi_redmi_note_13_4g-12750.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Redmi Note 13 4G
+  - url: https://www.gsmarena.com/xiaomi_redmi_note_13_pro-12581.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Redmi Note 13 Pro
+  - url: https://www.gsmarena.com/xiaomi_redmi_note_14-13559.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Redmi Note 14
+  - url: https://www.gsmarena.com/xiaomi_redmi_note_14_pro-13355.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Redmi Note 14 Pro
+  - url: https://www.gsmarena.com/xiaomi_redmi_a3-12822.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Redmi A3
+  - url: https://www.gsmarena.com/xiaomi_redmi_a4-13444.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Redmi A4
+  - url: https://www.gsmarena.com/xiaomi_redmi_12c-12051.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Redmi 12C
+  - url: https://www.gsmarena.com/xiaomi_redmi_13c-12689.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Redmi 13C
+  - url: https://www.gsmarena.com/xiaomi_redmi_14c-13291.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Redmi 14C
+  - url: https://www.gsmarena.com/xiaomi_poco_c65-12684.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Poco C65
+  - url: https://www.gsmarena.com/xiaomi_poco_m6_pro-12452.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Poco M6 Pro
+  - url: https://www.gsmarena.com/xiaomi_poco_x6_pro-12717.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Poco X6 Pro
+  - url: https://www.gsmarena.com/xiaomi_poco_x7-13604.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Poco X7
+  - url: https://www.gsmarena.com/xiaomi_poco_x7_pro-13582.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Poco X7 Pro
+  - url: https://www.gsmarena.com/xiaomi_poco_f5-12258.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Poco F5
+  - url: https://www.gsmarena.com/xiaomi_poco_f6-13000.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi Poco F6
+  - url: https://www.gsmarena.com/xiaomi_13-12013.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi 13
+  - url: https://www.gsmarena.com/xiaomi_13_lite-12072.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi 13 Lite
+  - url: https://www.gsmarena.com/xiaomi_13t_pro-12388.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi 13T Pro
+  - url: https://www.gsmarena.com/xiaomi_14-12626.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi 14
+  - url: https://www.gsmarena.com/xiaomi_14t-13329.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi 14T
+  - url: https://www.gsmarena.com/xiaomi_15-13472.php
+    brand: xiaomi
+    category: specs
+    model: Xiaomi 15
+
+  # =========================================================================
+  # XIAOMI — how-to / troubleshooting (mi.com global support).
+  # guidance/imei_smartphone and mi.com/verify serve the used-phone +
+  # counterfeit-detection pillar.
+  # =========================================================================
+  - url: https://www.mi.com/global/support/guidance/imei_smartphone/
+    brand: xiaomi
+    category: howto
+    model: What is your Xiaomi smartphone's IMEI?
+  - url: https://www.mi.com/verify
+    brand: xiaomi
+    category: howto
+    model: Xiaomi Product Authentication
+  - url: https://www.mi.com/global/support/faq/details/KA-13509/
+    brand: xiaomi
+    category: howto
+    model: How to set factory settings?
+  - url: https://www.mi.com/global/support/faq/details/KA-497463/
+    brand: xiaomi
+    category: howto
+    model: How to perform Factory reset on the REDMI 13C?
+  - url: https://www.mi.com/global/support/article/KA-03581/
+    brand: xiaomi
+    category: howto
+    model: How to set backup & reset?
+  - url: https://www.mi.com/global/support/faq/details/KA-07061/
+    brand: xiaomi
+    category: howto
+    model: Mobile phone battery drains too fast
+  - url: https://www.mi.com/global/support/faq/details/KA-483278/
+    brand: xiaomi
+    category: howto
+    model: The battery of the REDMI Note 13 drains fast
+  - url: https://www.mi.com/global/support/faq/details/KA-515635/
+    brand: xiaomi
+    category: howto
+    model: The Xiaomi smartphone overheats while charging
+  - url: https://www.mi.com/global/support/faq/details/KA-07039/
+    brand: xiaomi
+    category: howto
+    model: Mi phone overheat
+  - url: https://www.mi.com/global/support/faq/details/KA-569684/
+    brand: xiaomi
+    category: howto
+    model: What to do if the Xiaomi smartphone shows low storage level?
+  - url: https://www.mi.com/global/support/faq/details/KA-544227/
+    brand: xiaomi
+    category: howto
+    model: Why does the Xiaomi smartphone show insufficient storage space when updating the system?
+  - url: https://www.mi.com/global/support/faq/details/KA-07161/
+    brand: xiaomi
+    category: howto
+    model: What if phone storage space is not enough?
+  - url: https://www.mi.com/global/support/article/KA-12357/
+    brand: xiaomi
+    category: howto
+    model: Phone Storage/RAM Introduction and FAQs
+  - url: https://www.mi.com/global/support/faq/details/KA-491402/
+    brand: xiaomi
+    category: howto
+    model: The system of the REDMI Note 13 lags
+  - url: https://www.mi.com/global/support/faq/details/KA-07071/
+    brand: xiaomi
+    category: howto
+    model: What to do if the phone says no signal / no service?
+  - url: https://www.mi.com/global/support/faq/details/KA-484720/
+    brand: xiaomi
+    category: howto
+    model: Why is there no signal or some functions unavailable during international roaming?
+  - url: https://www.mi.com/global/support/faq/details/KA-07139/
+    brand: xiaomi
+    category: howto
+    model: Unable to access network using mobile data
+  - url: https://www.mi.com/global/support/faq/details/KA-92049/
+    brand: xiaomi
+    category: howto
+    model: 4G or 5G network doesn't work on the Xiaomi 13
+  - url: https://www.mi.com/global/support/faq/details/KA-92269/
+    brand: xiaomi
+    category: howto
+    model: 4G or 5G network doesn't work on the REDMI 10
+  - url: https://www.mi.com/global/support/faq/details/KA-557220/
+    brand: xiaomi
+    category: howto
+    model: What should I do if the Xiaomi 14 gets water-damaged?
+  - url: https://www.mi.com/global/support/faq/details/KA-07080/
+    brand: xiaomi
+    category: howto
+    model: Phone can't turn on
+  - url: https://www.mi.com/global/support/faq/details/KA-91951/
+    brand: xiaomi
+    category: howto
+    model: The REDMI 9T can't be turned on
+  - url: https://www.mi.com/global/support/faq/details/KA-91804/
+    brand: xiaomi
+    category: howto
+    model: The Mi 11 can't be turned on
+  - url: https://www.mi.com/global/support/faq/details/KA-639873/
+    brand: xiaomi
+    category: howto
+    model: What to do if photos taken with the Xiaomi phone appear blurry or unclear?
+  - url: https://www.mi.com/global/support/faq/details/KA-537917/
+    brand: xiaomi
+    category: howto
+    model: Why are the photos taken by the Xiaomi 15 front camera blurry or abnormal in color?
+  - url: https://www.mi.com/global/support/faq/details/KA-11641/
+    brand: xiaomi
+    category: howto
+    model: REDMI A1 FAQ
+  - url: https://www.mi.com/global/support/faq/details/KA-12718/
+    brand: xiaomi
+    category: howto
+    model: Xiaomi 13 FAQ
+  - url: https://www.mi.com/global/support/faq/details/KA-43103/
+    brand: xiaomi
+    category: howto
+    model: Xiaomi 13T FAQ

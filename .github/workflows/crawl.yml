@@ -17,7 +17,9 @@ permissions:
 jobs:
   crawl:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # gsmarena is throttled to 1 req / 15s (it IP-bans on bursts), so a large
+    # specs sweep spends most of its wall-clock deliberately waiting.
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
@@ -31,12 +33,19 @@ jobs:
           pip install -r scripts/requirements.txt
           crawl4ai-setup
 
+      # continue-on-error so that a systemic failure (e.g. a rate-limit ban part
+      # way through) still lets us KEEP the pages that did come down. The job is
+      # failed explicitly in the last step instead — we want the content AND the
+      # red X, not one or the other.
       - name: Crawl
+        id: crawl
+        continue-on-error: true
         env:
           ONLY_BRAND: ${{ inputs.only_brand }}
         run: python scripts/crawl.py
 
       - name: Commit new/updated markdown
+        if: always()
         run: |
           git config user.name  "hmr-rag-bot"
           git config user.email "hmr-rag-bot@users.noreply.github.com"
@@ -47,3 +56,11 @@ jobs:
             git commit -m "crawl: update sources ($(date -u +%Y-%m-%dT%H:%MZ))"
             git push
           fi
+
+      - name: Fail the run if the crawl failed systemically
+        if: steps.crawl.outcome == 'failure'
+        run: |
+          echo "::error::crawl.py exited non-zero — too large a share of sources failed."
+          echo "Anything that did crawl was still committed by the previous step."
+          echo "Check the Crawl step log for BLOCKED (bot-check) or a rate-limit ban before re-running."
+          exit 1
