@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_poco_c65-12684.php
 brand: xiaomi
 category: specs
 model: Xiaomi Poco C65
-crawled: 2026-07-14T13:55:12Z
+crawled: 2026-07-14T14:30:09Z
 ---
 
 # Xiaomi Poco C65

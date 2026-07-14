@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_poco_f6-13000.php
 brand: xiaomi
 category: specs
 model: Xiaomi Poco F6
-crawled: 2026-07-14T13:57:37Z
+crawled: 2026-07-14T14:32:09Z
 ---
 
 # Xiaomi Poco F6

@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_redmi_12c-12051.php
 brand: xiaomi
 category: specs
 model: Xiaomi Redmi 12C
-crawled: 2026-07-14T13:54:12Z
+crawled: 2026-07-14T14:29:09Z
 ---
 
 # Xiaomi Redmi 12C

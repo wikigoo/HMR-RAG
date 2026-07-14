@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_redmi_note_14-13559.php
 brand: xiaomi
 category: specs
 model: Xiaomi Redmi Note 14
-crawled: 2026-07-14T13:52:52Z
+crawled: 2026-07-14T14:27:49Z
 ---
 
 # Xiaomi Redmi Note 14 5G (India)

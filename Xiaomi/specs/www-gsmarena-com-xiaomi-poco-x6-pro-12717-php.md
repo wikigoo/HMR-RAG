@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_poco_x6_pro-12717.php
 brand: xiaomi
 category: specs
 model: Xiaomi Poco X6 Pro
-crawled: 2026-07-14T13:41:32Z
+crawled: 2026-07-14T14:30:49Z
 ---
 
 # Xiaomi Poco X6 Pro

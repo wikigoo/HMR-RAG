@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_redmi_note_11s-11335.php
 brand: xiaomi
 category: specs
 model: Xiaomi Redmi Note 11S
-crawled: 2026-07-14T13:50:32Z
+crawled: 2026-07-14T14:25:29Z
 ---
 
 # Xiaomi Redmi Note 11S

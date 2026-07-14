@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_redmi_note_14_pro-13355.php
 brand: xiaomi
 category: specs
 model: Xiaomi Redmi Note 14 Pro
-crawled: 2026-07-14T13:53:12Z
+crawled: 2026-07-14T14:28:09Z
 ---
 
 # Xiaomi Redmi Note 14 Pro 5G (India)

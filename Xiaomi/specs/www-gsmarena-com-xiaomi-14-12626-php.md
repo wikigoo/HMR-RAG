@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_14-12626.php
 brand: xiaomi
 category: specs
 model: Xiaomi 14
-crawled: 2026-07-14T13:58:57Z
+crawled: 2026-07-14T14:33:29Z
 ---
 
 * Released 2023, November 01 188g or 193g, 8.2mm thickness Android 14, up to 15 256GB/512GB/1TB storage, no card slot

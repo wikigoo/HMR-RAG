@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_redmi_a3-12822.php
 brand: xiaomi
 category: specs
 model: Xiaomi Redmi A3
-crawled: 2026-07-14T13:53:32Z
+crawled: 2026-07-14T14:28:29Z
 ---
 
 # Xiaomi Redmi A3

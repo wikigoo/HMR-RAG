@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_13t_pro-12388.php
 brand: xiaomi
 category: specs
 model: Xiaomi 13T Pro
-crawled: 2026-07-14T13:58:37Z
+crawled: 2026-07-14T14:33:09Z
 ---
 
 # Xiaomi 13T Pro

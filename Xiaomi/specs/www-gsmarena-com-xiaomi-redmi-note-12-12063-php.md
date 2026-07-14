@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_redmi_note_12-12063.php
 brand: xiaomi
 category: specs
 model: Xiaomi Redmi Note 12
-crawled: 2026-07-14T13:50:53Z
+crawled: 2026-07-14T14:25:49Z
 ---
 
 # Xiaomi Redmi Note 12

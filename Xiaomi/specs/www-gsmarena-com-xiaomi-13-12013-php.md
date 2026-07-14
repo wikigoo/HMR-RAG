@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_13-12013.php
 brand: xiaomi
 category: specs
 model: Xiaomi 13
-crawled: 2026-07-14T13:57:57Z
+crawled: 2026-07-14T14:32:29Z
 ---
 
 * Released 2022, December 14 185g or 189g, 8mm thickness Android 13, up to Android 14, MIUI 14 128GB/256GB/512GB storage, no card slot

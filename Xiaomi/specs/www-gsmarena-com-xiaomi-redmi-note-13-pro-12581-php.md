@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_redmi_note_13_pro-12581.php
 brand: xiaomi
 category: specs
 model: Xiaomi Redmi Note 13 Pro
-crawled: 2026-07-14T13:52:32Z
+crawled: 2026-07-14T14:27:29Z
 ---
 
 # Xiaomi Redmi Note 13 Pro

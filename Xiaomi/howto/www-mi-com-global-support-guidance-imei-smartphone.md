@@ -3,9 +3,11 @@ source: https://www.mi.com/global/support/guidance/imei_smartphone/
 brand: xiaomi
 category: howto
 model: What is your Xiaomi smartphone's IMEI?
-crawled: 2026-07-14T13:44:05Z
+crawled: 2026-07-14T14:34:19Z
 ---
 
+Choose your location and language
+Global / English
 ## What is your Xiaomi smartphone's IMEI?
 ### What is your Xiaomi smartphone's IMEI?
 The IMEI (International Mobile Equipment Identity) is a 15-17-digit code that is given to your Xiaomi smartphone. This number is used by service providers to uniquely identify your Xiaomi handset.

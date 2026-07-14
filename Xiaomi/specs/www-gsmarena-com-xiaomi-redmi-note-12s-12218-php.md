@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_redmi_note_12s-12218.php
 brand: xiaomi
 category: specs
 model: Xiaomi Redmi Note 12S
-crawled: 2026-07-14T13:51:31Z
+crawled: 2026-07-14T14:26:29Z
 ---
 
 # Xiaomi Redmi Note 12S

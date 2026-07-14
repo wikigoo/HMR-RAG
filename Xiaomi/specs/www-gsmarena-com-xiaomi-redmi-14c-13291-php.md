@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_redmi_14c-13291.php
 brand: xiaomi
 category: specs
 model: Xiaomi Redmi 14C
-crawled: 2026-07-14T13:54:52Z
+crawled: 2026-07-14T14:29:49Z
 ---
 
 # Xiaomi Redmi 14C

@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_redmi_a4-13444.php
 brand: xiaomi
 category: specs
 model: Xiaomi Redmi A4
-crawled: 2026-07-14T13:53:53Z
+crawled: 2026-07-14T14:28:49Z
 ---
 
 # Xiaomi Redmi A4

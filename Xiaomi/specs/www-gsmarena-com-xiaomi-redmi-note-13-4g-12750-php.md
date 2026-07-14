@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_redmi_note_13_4g-12750.php
 brand: xiaomi
 category: specs
 model: Xiaomi Redmi Note 13 4G
-crawled: 2026-07-14T13:52:12Z
+crawled: 2026-07-14T14:27:09Z
 ---
 
 # Xiaomi Redmi Note 13 4G

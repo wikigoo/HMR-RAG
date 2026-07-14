@@ -3,9 +3,11 @@ source: https://www.mi.com/global/support/faq/details/KA-639873/
 brand: xiaomi
 category: howto
 model: What to do if photos taken with the Xiaomi phone appear blurry or unclear?
-crawled: 2026-07-14T13:45:08Z
+crawled: 2026-07-14T14:36:38Z
 ---
 
+Choose your location and language
+Global / English
 # What to do if photos taken with the Xiaomi phone appear blurry or unclear?
 **If the photos taken with the Xiaomi phone appear blurry or unclear, please refer to the following steps to troubleshoot:**
 1. If a particular shot is blurry across the entire scene, the autofocus motor can be malfunctioning. Please restart the camera app or restart your phone.

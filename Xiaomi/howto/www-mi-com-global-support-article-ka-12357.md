@@ -3,9 +3,11 @@ source: https://www.mi.com/global/support/article/KA-12357/
 brand: xiaomi
 category: howto
 model: Phone Storage/RAM Introduction and FAQs
-crawled: 2026-07-14T13:44:37Z
+crawled: 2026-07-14T14:35:27Z
 ---
 
+Choose your location and language
+Global / English
 # Phone Storage/RAM Introduction and FAQs
 There are two types of such problems: insufficient storage space and insufficient RAM (random access memory).
 ****Storage space (commonly 64/128/256/512G)**** stores data and files such as music, pictures, movies, apps and application data of the phone. The larger the storage space, the more apps you can install/store pictures music movies etc.

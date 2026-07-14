@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/xiaomi_14_ultra-12827.php
 brand: xiaomi
 category: specs
 model: Xiaomi 14 Ultra
-crawled: 2026-07-14T13:36:47Z
+crawled: 2026-07-14T14:24:29Z
 ---
 
 # Xiaomi 14 Ultra
