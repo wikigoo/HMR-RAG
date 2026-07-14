@@ -3,7 +3,7 @@ source: https://www.gsmarena.com/samsung_galaxy_s24_ultra-12771.php
 brand: samsung
 category: specs
 model: Samsung Galaxy S24 Ultra
-crawled: 2026-07-13T16:54:20Z
+crawled: 2026-07-14T13:30:44Z
 ---
 
 # Samsung Galaxy S24 Ultra
@@ -67,7 +67,7 @@ crawled: 2026-07-13T16:54:20Z
 | SM-S928B, SM-S928B/DS, SM-S928U, SM-S928U1, SM-S928W, SM-S928N, SM-S9280, SM-S928E, SM-S928E/DS  |
 | 1.26 W/kg (head) 0.62 W/kg (body)   |
 | 1.06 W/kg (head) 1.30 W/kg (body)   |
-| [$ 500.06 / C$ 770.00 / £ 488.45 / € 589.00 / ₹ 98,999](https://www.gsmarena.com/samsung_galaxy_s24_ultra-price-12771.php)  |
+| [$ 500.06 / C$ 770.00 / £ 430.00 / € 583.25 / ₹ 98,999](https://www.gsmarena.com/samsung_galaxy_s24_ultra-price-12771.php)  |
 |  AnTuTu: 1453497 (v9), 1823822 (v10) GeekBench: 7076 (v6) 3DMark: 4983 (Wild Life Extreme)  |
 | --- |
 |  [1447 nits max brightness (measured)](https://www.gsmarena.com/samsung_galaxy_s24_ultra-review-2670p3.php#dt)  |
@@ -87,15 +87,15 @@ We can not guarantee that the information on this page is 100% correct.
 ### Samsung Galaxy S24 Ultra review
 You look at the Galaxy S24 and S24+ and can't help but wonder if they really are the new models, or Samsung just went and reissued the old ones. The Ultra, on the other hand, is a different...
 ## [Samsung Galaxy S24 Ultra - user opinions and reviews](https://www.gsmarena.com/samsung_galaxy_s24_ultra-reviews-12771.php)
+  * 13 Jul 2026
+
+What is the On screen time of S24 ultra. Especially Battery backup.
   * 06 Jul 2026
 
 Thanks for the help Maggs!!
   * 04 Jul 2026
 
 Go into settings . Go to edge panel. Then press handle and you will see up and down arrows . Just hold it and you can move it. It used to be easy doing it on homescreen.
-  * 30 Jun 2026
-
-Google play system also got the June update.
 
 Total user opinions:
   * [ Google Pixel 9 Pro XL vs. Samsung Galaxy S24 Ultra ](https://www.gsmarena.com/google_pixel_9_pro_xl_vs_samsung_galaxy_s24_ultra_review_battery_camera_price_compared-news-64345.php)
@@ -104,3 +104,6 @@ Total user opinions:
   * [ Samsung Galaxy S24 Ultra vs. Apple iPhone 15 Pro Max ](https://www.gsmarena.com/samsung_galaxy_s24_ultra_vs_apple_iphone_15_pro_max_review_battery_camera_price_compared-news-61858.php)
 
 © 2000-2026 [Terms of use](https://www.gsmarena.com/terms.php3)
+Do Not Sell or Share My Personal Information
+# Opt out of the sale or sharing of personal information
+We won't sell or share your personal information to inform the ads you see. You may still see interest-based ads if your information is sold or shared by other companies or was sold or shared previously.
