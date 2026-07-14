@@ -399,10 +399,12 @@ sources:
     brand: xiaomi
     category: howto
     model: What is your Xiaomi smartphone's IMEI?
-  - url: https://www.mi.com/verify
-    brand: xiaomi
-    category: howto
-    model: Xiaomi Product Authentication
+  # https://www.mi.com/verify — Xiaomi's official product-authentication page.
+  # Deliberately NOT crawled: it sits behind Akamai bot protection and fails every
+  # run ("Akamai block (Reference #)"). It is an interactive IMEI form rather than
+  # an article, so there is little prose to extract anyway. The counterfeit pillar
+  # is served by guidance/imei_smartphone above. Do not re-add it without checking
+  # that it actually crawls.
   - url: https://www.mi.com/global/support/faq/details/KA-13509/
     brand: xiaomi
     category: howto

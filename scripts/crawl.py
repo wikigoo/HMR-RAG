@@ -37,7 +37,7 @@ SOURCES_FILE = os.path.join(ROOT, "sources.yaml")
 
 # Seconds to wait between two requests to the SAME host. gsmarena bans on bursts;
 # the support sites are far more tolerant, so they get a smaller courtesy delay.
-PER_HOST_DELAY = {"www.gsmarena.com": 15.0, "m.gsmarena.com": 15.0}
+PER_HOST_DELAY = {"www.gsmarena.com": 20.0, "m.gsmarena.com": 20.0}
 DEFAULT_HOST_DELAY = 2.0
 
 # Fail the run if more than this fraction of sources failed. Catches the case
@@ -132,6 +132,14 @@ async def main() -> int:
         exclude_social_media_links=True,
         remove_overlay_elements=True,
         word_count_threshold=5,
+        # mi.com's support FAQ pages render their body client-side. Returning as
+        # soon as the DOM is ready captured an empty shell — 14 of them came back
+        # at exactly 17 chars and were dropped as THIN, which reads like a bad URL
+        # but was really us not waiting for the render. Wait for the network to go
+        # quiet, then give the page a moment to paint.
+        wait_until="networkidle",
+        delay_before_return_html=2.5,
+        page_timeout=45000,
         markdown_generator=DefaultMarkdownGenerator(
             content_filter=PruningContentFilter(
                 threshold=0.5, threshold_type="fixed", min_word_threshold=3
